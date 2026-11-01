@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101510">
+<title>CS2 Community Server</title>
+<style>
+:root{color-scheme:dark;--ink:#101510;--panel:#19211a;--line:#364238;--text:#eff4e8;--muted:#a9b5a5;--lime:#c8ed70;--orange:#efa266;--display:"Bahnschrift SemiCondensed","Arial Narrow",sans-serif;--body:"Bahnschrift","Segoe UI Variable","Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 82% 20%,#2b3829 0,transparent 34%),repeating-linear-gradient(0deg,rgba(228,241,222,.025) 0 1px,transparent 1px 42px),repeating-linear-gradient(90deg,rgba(228,241,222,.022) 0 1px,transparent 1px 42px),var(--ink);color:var(--text);font:15px var(--body)}a{color:inherit}main{max-width:1180px;margin:auto;padding:24px clamp(16px,4vw,48px) 36px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:18px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--lime);color:var(--lime);font:800 13px var(--display)}.brand small,.eyebrow{display:block;color:var(--lime);font:700 10px var(--display);letter-spacing:1.6px;text-transform:uppercase}.brand strong{display:block;margin-top:3px;font:700 15px var(--display)}.live{display:flex;align-items:center;gap:8px;color:var(--lime);font:700 11px var(--display);letter-spacing:1px;text-transform:uppercase}.live:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px #c8ed7080}.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(230px,.85fr);gap:30px;align-items:center;min-height:410px;padding:48px 0 38px;border-bottom:1px solid var(--line);overflow:hidden}.hero-copy{position:relative;z-index:1}.eyebrow{margin-bottom:13px}.hero h1{max-width:720px;margin:0;font:750 clamp(38px,6.4vw,76px)/.95 var(--display);letter-spacing:0}.hero p{max-width:520px;color:var(--muted);font-size:16px;line-height:1.55;margin:20px 0 24px}.join{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:54px;padding:0 22px;background:var(--lime);color:#182015;text-decoration:none;font:800 13px var(--display);letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--lime);transition:background .15s,transform .15s}.join:hover{background:#daf59b;transform:translateY(-2px)}.arrow{width:10px;height:10px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg)}.address{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:17px;color:var(--muted);font:12px var(--display);letter-spacing:.25px}.address code{color:var(--text);font:13px Consolas,"Cascadia Mono",monospace}.copy{border:1px solid var(--line);background:#202a22;color:var(--text);padding:7px 10px;font:700 10px var(--display);text-transform:uppercase;cursor:pointer}.copy:hover{border-color:var(--lime);color:var(--lime)}.art{position:relative;justify-self:end;width:min(100%,340px);aspect-ratio:1;border:1px solid #53634f;background:linear-gradient(145deg,#1d281f 0 15%,#131a15 15% 50%,#1b261e 50% 70%,#111712 70%);clip-path:polygon(10% 0,100% 0,100% 89%,89% 100%,0 100%,0 11%);display:grid;place-items:center}.art:before,.art:after{content:"";position:absolute;border:1px solid #75896a66;inset:12%;clip-path:polygon(0 0,100% 0,100% 75%,75% 75%,75% 100%,0 100%)}.art:after{inset:25%;border-color:#efa26688;clip-path:polygon(0 0,75% 0,75% 25%,100% 25%,100% 100%,25% 100%,25% 75%,0 75%)}.art-core{position:relative;z-index:1;width:90px;height:90px;border:1px solid var(--lime);display:grid;place-items:center;color:var(--lime);font:800 24px var(--display);background:#121912dd;box-shadow:0 0 0 10px #c8ed7010,0 0 0 24px #c8ed7008}.art-label{position:absolute;left:16px;bottom:14px;color:#dbe5d6;font:700 9px var(--display);letter-spacing:1.1px;text-transform:uppercase}.details{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:24px 0 28px}.section-title{margin:0 0 13px;font:700 12px var(--display);text-transform:uppercase;letter-spacing:1.2px}.modes{display:flex;gap:8px;flex-wrap:wrap}.mode{padding:9px 11px;border:1px solid var(--line);color:#d6e0d1;font:700 11px var(--display);text-transform:uppercase;letter-spacing:.4px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{border-top:1px solid #697c5b;padding-top:9px;color:var(--muted);font-size:12px;line-height:1.45}.step b{display:block;color:var(--text);font:700 11px var(--display);text-transform:uppercase;margin-bottom:4px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.toast{min-height:16px;color:var(--lime);font-size:12px;margin-top:9px}@media(max-width:720px){main{padding-top:16px}.hero{grid-template-columns:1fr;min-height:0;padding:40px 0 26px}.hero h1{max-width:540px;font-size:clamp(38px,13vw,60px)}.art{position:absolute;right:-110px;top:24px;width:220px;opacity:.34}.hero-copy{max-width:580px}.hero p{max-width:390px}.details{grid-template-columns:1fr;gap:22px;padding-top:20px}.steps{gap:8px}.step{font-size:11px}.topbar{align-items:flex-start}.live{padding-top:5px}}@media(max-width:430px){.hero{padding-top:34px}.art{right:-135px;opacity:.24}.join{width:100%}.address{align-items:flex-start}.steps{grid-template-columns:1fr}.step{display:flex;gap:9px}.step b{min-width:55px;margin:0}}
+</style>
+<style>
+.join[aria-disabled="true"]{opacity:.42;pointer-events:none}.auth-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 10px}.steam-login{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:0 13px;border:1px solid #536353;background:#1a2228;color:var(--text);font:700 11px var(--display);text-transform:uppercase;letter-spacing:.5px;cursor:pointer}.steam-login:hover{border-color:var(--lime)}.auth-state{color:var(--muted);font:11px var(--body)}.auth-warning{max-width:560px;color:#d1b987;font-size:11px;line-height:1.5;margin:10px 0 0}
+</style>
+</head>
+<body>
+<main>
+  <header class="topbar"><div class="brand"><div class="brand-mark">CS2</div><div><small>Community server</small><strong>Counter-Strike 2</strong></div></div><div class="live">Server address ready</div></header>
+  <section class="hero"><div class="hero-copy"><span class="eyebrow">Casual · Competitive · Deathmatch · Arms Race</span><h1>CS2 Community Server</h1><p>Sign in with Steam, then launch directly into the server.</p><div class="auth-row"><button class="steam-login" id="steamLogin" type="button">Sign in with Steam</button><span class="auth-state" id="authState">Steam sign-in required</span></div><a class="join" id="joinButton" href="#" aria-disabled="true">Join in Steam <span class="arrow" aria-hidden="true"></span></a><div class="address" id="addressLine" hidden><span>SERVER</span><code id="serverAddress">Loading address</code><button class="copy" id="copyAddress" type="button">Copy</button></div><p class="auth-warning">This static page gates the button only. GitHub Pages cannot validate Steam’s OpenID signature or prevent direct joins; the server still authenticates players through Steam.</p><div class="toast" id="notice" role="status"></div></div><div class="art" aria-hidden="true"><div class="art-core">CS2</div><span class="art-label">Match server · UDP 27015</span></div></section>
+  <section class="details"><div><h2 class="section-title">Modes</h2><div class="modes"><span class="mode">Casual</span><span class="mode">Competitive</span><span class="mode">Deathmatch</span><span class="mode">Arms Race</span></div></div><div><h2 class="section-title">Joining</h2><div class="steps"><div class="step"><b>01</b><span>Open Steam and sign in.</span></div><div class="step"><b>02</b><span>Click Join in Steam above.</span></div><div class="step"><b>03</b><span>Enter the server password if prompted.</span></div></div></div></section>
+  <footer class="foot"><span>Steam sign-in is handled by Steam. This site never asks for your Steam password.</span><span id="passwordNote">A server password may be required.</span></footer>
+</main>
+<script src="./server-config.js"></script>
+<script>
+const config=window.SERVER_CONFIG||{};
+const address=String(config.address||'');
+const joinButton=document.getElementById('joinButton');
+const loginButton=document.getElementById('steamLogin');
+const authState=document.getElementById('authState');
+const addressLine=document.getElementById('addressLine');
+const notice=document.getElementById('notice');
+const steamProvider='https://steamcommunity.com/openid/login';
+const siteBase=new URL(config.pagesUrl||new URL('./',window.location.href).href);
+
+function unlockJoin(steamId){
+  if(!/^\d{17}$/.test(steamId)||!/^\d{1,3}(\.\d{1,3}){3}:\d{1,5}$/.test(address))return false;
+  joinButton.href=`steam://connect/${address}`;
+  joinButton.setAttribute('aria-disabled','false');
+  loginButton.hidden=true;
+  authState.textContent=`Steam account ${steamId}`;
+  addressLine.hidden=false;
+  return true;
+}
+
+function handleSteamReturn(){
+  const params=new URLSearchParams(window.location.search);
+  if(!params.has('openid.mode'))return false;
+  const state=params.get('steam_state')||'';
+  const expectedState=sessionStorage.getItem('cs2-steam-state')||'';
+  const claimedId=params.get('openid.claimed_id')||'';
+  const identity=params.get('openid.identity')||'';
+  const claimedMatch=claimedId.match(/^https:\/\/steamcommunity\.com\/openid\/id\/(\d{17})$/);
+  const expectedReturn=new URL(siteBase.href);
+  expectedReturn.searchParams.set('steam_state',expectedState);
+  const signedFields=(params.get('openid.signed')||'').split(',');
+  const responseLooksValid=state&&state===expectedState&&params.get('openid.mode')==='id_res'&&params.get('openid.op_endpoint')===steamProvider&&claimedMatch&&identity===claimedId&&params.get('openid.return_to')===expectedReturn.href&&params.has('openid.sig')&&signedFields.includes('claimed_id')&&signedFields.includes('identity');
+  sessionStorage.removeItem('cs2-steam-state');
+  history.replaceState(null,'',siteBase.href);
+  if(!responseLooksValid){notice.textContent='Steam sign-in did not complete. Please try again.';return true}
+  const steamId=claimedMatch[1];
+  sessionStorage.setItem('cs2-steam-id',steamId);
+  unlockJoin(steamId);
+  return true;
+}
+
+if(address&&/^\d{1,3}(\.\d{1,3}){3}:\d{1,5}$/.test(address))document.getElementById('serverAddress').textContent=address;
+if(!handleSteamReturn()){const existingSteamId=sessionStorage.getItem('cs2-steam-id');if(existingSteamId)unlockJoin(existingSteamId)}
+loginButton.addEventListener('click',()=>{
+  if(window.location.protocol==='file:'){notice.textContent='Steam sign-in starts after this site is published on GitHub Pages.';return}
+  const state=crypto.randomUUID();
+  sessionStorage.setItem('cs2-steam-state',state);
+  const returnTo=new URL(siteBase.href);
+  returnTo.searchParams.set('steam_state',state);
+  const query=new URLSearchParams({'openid.ns':'http://specs.openid.net/auth/2.0','openid.mode':'checkid_setup','openid.return_to':returnTo.href,'openid.realm':`${siteBase.origin}/`,'openid.identity':'http://specs.openid.net/auth/2.0/identifier_select','openid.claimed_id':'http://specs.openid.net/auth/2.0/identifier_select'});
+  window.location.assign(`${steamProvider}?${query}`);
+});
+document.getElementById('copyAddress').addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText(address);notice.textContent='Server address copied.'}
+  catch{notice.textContent=address||'Server address is not configured.'}
+});
+</script>
+</body>
+</html>
